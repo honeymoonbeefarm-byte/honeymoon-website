@@ -1,0 +1,528 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HONEYMOON 天然银蜂蜜 | 雨林天然养生蜜</title>
+    <meta name="description" content="马来西亚原始雨林直采 • 纯天然银蜂蜜（Kelulut）• 富含蜂胶、花粉与活性成分 • 全家健康守护者">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+        
+        :root {
+            --gold: #F8C300;
+            --dark: #0F0F0F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', system-ui, sans-serif;
+            background: #000;
+            color: #eee;
+            line-height: 1.7;
+        }
+        
+        header {
+    position: fixed;
+    top: 0;
+    left: 0;   /* Pin to the absolute left edge */
+    right: 0;  /* Pin to the absolute right edge */
+    /* Remove width: 100%; */
+    background: rgba(15,15,15,0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #222;
+}
+        
+        .logo {
+            height: 55px;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--gold);
+        }
+        
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://powderblue-dove-894751.hostingersite.com/wp-content/uploads/2026/05/pexels-tomfisk-2606532-scaled.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            padding: 2rem;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.8rem, 8vw, 4.5rem);
+            color: var(--gold);
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+        }
+        
+        .hero p {
+            font-size: 1.35rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: #111;
+            padding: 16px 48px;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(248, 195, 0, 0.3);
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 75px rgba(248, 195, 0, 0.4);
+        }
+        
+        section {
+            padding: 110px 5%;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--gold);
+            margin-bottom: 3rem;
+        }
+        
+        .benefits-grid, .products-grid, .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background: #111;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-12px);
+        }
+        
+        .card img {
+            width: 100%;
+            height: px;
+            object-fit: cover;
+        }
+        
+        .card-body {
+            padding: 1.8rem;
+        }
+        
+        .price {
+            color: var(--gold);
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .testimonial {
+            background: #111;
+            border-radius: 16px;
+            padding: 2rem;
+            font-style: italic;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '“';
+            font-size: 6rem;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            opacity: 0.1;
+            color: var(--gold);
+        }
+        
+        details {
+            background: #111;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #222;
+        }
+        
+        summary {
+            font-weight: 500;
+            cursor: pointer;
+            list-style: none;
+        }
+        
+        footer {
+            background: #0a0a0a;
+            text-align: center;
+            padding: 4rem 5% 2rem;
+        }
+        
+        .wa-float {
+            position: fixed;
+            bottom: 30px;
+            right: 03px;
+            background: #25D366;
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            text-decoration: none;
+        }
+        
+        .wa-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;    /* Scale(1.05) makes the image roughly larger than the 70px button (72px total) */
+    transform: scale(1.05); 
+    transition: transform 0.3s ease;
+}/* Optional: Make it pop slightly more when the user hovers over it! */
+.wa-float:hover .wa-icon {
+    transform: scale(1.1); /* Enlarges a bit more on hover for a premium feel */
+}
+        
+        .gold-text {
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="https://powderblue-dove-894751.hostingersite.com/wp-content/uploads/2026/05/HoneyMoon-logo-horizontal.png" alt="HONEYMOON 天然银蜂蜜" style="height: 55px;">
+        </div>
+        <nav>
+            <a href="#home">首页</a>
+            <a href="#benefits">养生功效</a>
+            <a href="#products">产品系列</a>
+            <a href="#farm">蜂场直采</a>
+            <a href="#testimonials">真实口碑</a>
+            <a href="#faq">常见问题</a>
+            <a href="#contact">联系我们</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="https://powderblue-dove-894751.hostingersite.com/wp-content/uploads/2026/05/HoneyMoon-Logo-Only.png" alt="HONEYMOON" style="height: 200px; margin-bottom: 1.5rem;">
+            <h1>天然银蜂蜜</h1>
+            <p>马来西亚原始雨林 • 纯天然银蜂蜜（Kelulut）<br>
+            富含蜂胶 + 花粉 + 活性成分 • 全家健康守护者</p>
+            <a href="#products" class="cta-btn">立即选购养生蜜</a>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" style="background: #0a0a0a;">
+        <h2>天然养生功效</h2>
+        <div class="benefits-grid">
+            <div class="card">
+                <img src="https://powderblue-dove-894751.hostingersite.com/wp-content/uploads/2026/05/HoneyMoon-Logo-Only.png" alt="增强免疫力">
+                <div class="card-body">
+                    <h3 class="gold-text">增强免疫力</h3>
+                    <p>天然蜂胶与活性成分，帮助抵抗季节性不适，特别适合全家日常调理。</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://powderblue-dove-894751.hostingersite.com/wp-content/uploads/2026/05/HoneyMoon-Logo-Only.png" alt="抗氧化养颜">
+                <div class="card-body">
+                    <h3 class="gold-text">抗氧化养颜</h3>
+                    <p>高浓度抗氧化物，支持皮肤健康，由内而外焕发光彩。</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://powderblue-dove-894751.hostingersite.com/wp-content/uploads/2026/05/HoneyMoon-Logo-Only.png" alt="呼吸道舒适">
+                <div class="card-body">
+                    <h3 class="gold-text">呼吸道舒适</h3>
+                    <p>顾客反馈对喉咙不适有良好舒缓作用。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" style="background: #111;">
+        <h2>产品系列</h2>
+        <div class="products-grid">
+            <div class="card">
+                <img src="https://powderblue-dove-894751.hostingersite.com/wp-content/uploads/2026/05/250_L_crop.jpg" alt="银蜂蜜 250g">
+                <div class="card-body">
+                    <h3>天然银蜂蜜 - 小</h3>
+                    <p>250g</p>
+                    <p class="price">RM 70</p>
+                    <a href="https://wa.me/60184749128?text=我想订购250g银蜂蜜" target="_blank" class="cta-btn" style="padding:12px 24px; font-size:1rem; width:100%; text-align:center;">WhatsApp 订购</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="https://powderblue-dove-894751.hostingersite.com/wp-content/uploads/2026/05/image_XKz-scaled.jpeg" alt="银蜂蜜">
+                <div class="card-body">
+                    <h3>天然银蜂蜜 - 中</h3>
+                    <p>500g</p>
+                    <p class="price">RM 130</p>
+                    <a href="https://wa.me/60184749128?text=我想订购银蜂蜜" target="_blank" class="cta-btn" style="padding:12px 24px; font-size:1rem; width:100%; text-align:center;">WhatsApp 订购</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="https://powderblue-dove-894751.hostingersite.com/wp-content/uploads/2026/05/image_pYi-scaled.jpeg" alt="银蜂蜜">
+                <div class="card-body">
+                    <h3>天然银蜂蜜 - 大</h3>
+                    <p>1kg</p>
+                    <p class="price">RM 250</p>
+                    <a href="https://wa.me/60184749128?text=我想订购银蜂花粉" target="_blank" class="cta-btn" style="padding:12px 24px; font-size:1rem; width:100%; text-align:center;">WhatsApp 订购</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="https://powderblue-dove-894751.hostingersite.com/wp-content/uploads/2026/05/HoneyMoon_pollen_L-lower-res-scaled.jpg" alt="银蜂花粉">
+                <div class="card-body">
+                    <h3>天然银蜂花粉</h3>
+                    <p>100g<p>
+                    <p class="price">RM XXX</p>
+                    <a href="https://wa.me/60184749128?text=我想订购银蜂花粉" target="_blank" class="cta-btn" style="padding:12px 24px; font-size:1rem; width:100%; text-align:center;">WhatsApp 订购</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="https://powderblue-dove-894751.hostingersite.com/wp-content/uploads/2026/05/IMG_5753.jpg" alt="银蜂胶">
+                <div class="card-body">
+                    <h3>纯正银蜂胶萃取液</h3>
+                    <p>10ml<p>
+                    <p class="price">RM 55</p>
+                    <a href="https://wa.me/60184749128?text=我想订购银蜂胶" target="_blank" class="cta-btn" style="padding:12px 24px; font-size:1rem; width:100%; text-align:center;">WhatsApp 订购</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Farm -->
+    <section id="farm" style="background: #000;">
+        <h2>雨林直采 • 蜂场故事</h2>
+        <p style="text-align:center; max-width:800px; margin:0 auto 3rem; font-size:1.2rem;">
+            我们坚持「Direct Farm to Table」，从马来西亚原始热带雨林蜂场直采。<br>
+            每一瓶 HONEYMOON 都是纯正天然银蜂蜜，保留最多活性成分。
+        </p>
+        <div style="text-align:center;">
+            <img src="https://powderblue-dove-894751.hostingersite.com/wp-content/uploads/2026/05/IMG-20250502-WA0054.jpg" alt="雨林蜂场" style="max-width:100%; border-radius:16px;">
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" style="background:#0a0a0a;">
+        <h2>真实顾客口碑</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p>喝了银蜂蜜后，喉咙不适明显好转，孩子也爱喝。全家都在用！</p>
+                <strong>—— 多位顾客真实反馈</strong>
+            </div>
+            <div class="testimonial">
+                <p>咳嗽、痰多的情况改善很多，比普通蜂蜜效果更好。</p>
+                <strong>—— 多位家长反馈</strong>
+            </div>
+            <div class="testimonial">
+                <p>免疫力提升，皮肤更有光泽。非常推荐给30-50岁姐妹们。</p>
+                <strong>—— 陈女士 等</strong>
+            </div>
+        </div>
+    </section>
+
+<!-- FAQ -->
+    <section id="faq" style="background:#111; color: #fff; padding: 110px 5%;">
+        <h2>常见问题</h2>
+        <div style="max-width:800px; margin:0 auto;">
+            
+            <!-- FAQ Item 1 -->
+            <details class="faq-item">
+                <summary>银蜂蜜和普通蜂蜜有什么不同？</summary>
+                <p class="faq-content">银蜂（无针蜂）蜜含有更高比例的蜂胶与独特活性物质，口感更清新，营养成分更丰富。</p>
+            </details>
+
+            <!-- FAQ Item 2 -->
+            <details class="faq-item">
+                <summary>适合什么年龄服用？</summary>
+                <p class="faq-content">全年龄段都适合，尤其推荐作为全家日常养生饮品。</p>
+            </details>
+
+            <!-- FAQ Item 3 -->
+            <details class="faq-item">
+                <summary>如何保存？</summary>
+                <p class="faq-content">常温阴凉处保存即可，开封后建议放入冰箱冷藏。</p>
+            </details>
+            
+        </div>
+
+        <style>
+            .faq-item {
+                background: #111; /* Matching your dark theme style */
+                border-radius: 16px;
+                padding: 1.5rem;
+                margin-bottom: 1rem;
+                border: 1px solid #222;
+                transition: background-color 0.5s ease;
+            }
+
+            .faq-item[open] {
+                background: #222; /* Slightly changes background when active */
+            }
+
+            .faq-item summary {
+                font-weight: 500;
+                cursor: pointer;
+                list-style: none; /* Hides default HTML arrow */
+                display: flex;
+                justify-content: space-between; /* Pushes text to left, icon to right */
+                align-items: center;
+                user-select: none;
+            }
+
+            /* Safari fix for hiding default arrow */
+            .faq-item summary::-webkit-details-marker {
+                display: none;
+            }
+
+            /* Creating the custom ">" arrow on the right side */
+            .faq-item summary::after {
+                content: "";
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border-right: 2px solid var(--gold); /* Uses your website's gold color */
+                border-bottom: 2px solid var(--gold);
+                transform: rotate(-45deg); /* Forms the ">" shape pointing right */
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                margin-right: 0.5rem;
+            }
+
+            /* Rotates the right-side arrow downwards when open */
+            .faq-item[open] summary::after {
+                transform: rotate(45deg); 
+            }
+
+            /* Styling and animation padding for content */
+            .faq-content {
+                margin-top: 1rem;
+                color: #ccc;
+                padding-right: 1.5rem;
+                line-height: 1.6;
+                /* Simple CSS entry fade effect */
+                animation: fadeIn 0.4s ease-out;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-4px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        </style>
+    </section>
+        
+
+    <!-- Style block to handle the custom arrow and animation -->
+    <style>
+        .faq-item {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 1rem;
+        }
+        .faq-item summary {
+            cursor: pointer;
+            list-style: none; /* Hides the default browser arrow */
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        /* Hides default arrow for Safari */
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        /* Adds the custom > arrow */
+        .faq-item summary::before {
+            content: "▶"; 
+            display: inline-block;
+            margin-right: 0.75rem;
+            font-size: 0.8rem;
+            color: #ffb703; /* You can change this to any color you like */
+            transition: transform 0.2s ease;
+        }
+        /* Rotates the arrow when the details box is open */
+        .faq-item[open] summary::before {
+            transform: rotate(90deg);
+        }
+    </style>
+
+    <!-- Contact -->
+    <section id="contact" style="background:#111; text-align:center;">
+        <h2>联系我们</h2>
+        <p style="font-size:1.5rem; margin:2rem 0;">
+            WhatsApp / 电话：<br>
+            <a href="https://wa.me/60184749128" style="color:var(--gold); font-size:2.2rem; text-decoration:none; font-weight:bold;">+60 18 474 9128</a>
+        </p>
+        <p>欢迎咨询产品、蜂场参观或下单</p>
+    </section>
+
+    <footer>
+        <img src="https://powderblue-dove-894751.hostingersite.com/wp-content/uploads/2026/05/HoneyMoon-logo-horizontal.png" alt="HONEYMOON" style="height:60px; opacity:0.8; margin-bottom:1rem;">
+        <p>© 2026 HONEYMOON 天然银蜂蜜 • 马来西亚雨林直采 • 纯天然养生</p>
+    </footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/60184749128?text=您好，我想了解HONEYMOON天然银蜂蜜" class="wa-float" target="_blank">
+    <img src="https://powderblue-dove-894751.hostingersite.com/wp-content/uploads/2026/05/whatsapp_1384007.png" alt="WhatsApp" class="wa-icon">
+</a>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
